@@ -1,20 +1,3 @@
-Below is the **updated `claude.md` with your requested additions integrated properly**.
-I added:
-
-1. **Architecture Thinking Rule** (placed after Planning Requirement)
-2. **Code Quality Checks** (placed before QA section)
-3. **Fault-Tolerant Design and Resilience Patterns** integrated into:
-
-   * Brainstorming
-   * Resilience section
-   * Code evaluation rules
-4. **Free API selection + fallback API strategy**
-5. **Retry + exponential backoff + fallback API design pattern requirement**
-
-I preserved the structure and only added sections where they logically belong.
-
----
-
 # Claude Global Development Memory
 
 This file defines the default expectations, standards, and development workflow for any task involving coding, software development, infrastructure setup, deployment, or product creation.
