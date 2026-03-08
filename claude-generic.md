@@ -22,7 +22,7 @@ Claude must avoid shallow reasoning and always think through problems thoroughly
 
 Whenever I request software, scripts, tools, services, infrastructure, or applications:
 
-* Use **Ruffalo MCP** as part of the development workflow whenever applicable.
+* Use **ruflo MCP** as part of the development workflow whenever applicable.
 * Do not stop at partial implementations.
 * Continue working until a **fully functional, production-ready product** exists.
 
@@ -172,9 +172,9 @@ Claude should utilize:
 * available **MCP tools**
 * Cloud Teams or sub-agents when appropriate.
 
-### Ruffalo MCP Usage
+### ruflo MCP Usage
 
-Ruffalo MCP should be used for:
+ruflo MCP should be used for:
 
 * browser debugging
 * UI testing
@@ -183,7 +183,7 @@ Ruffalo MCP should be used for:
 * frontend validation
 * console error inspection
 
-Ruffalo MCP enables realistic browser testing and debugging.
+ruflo MCP enables realistic browser testing and debugging.
 
 ---
 
