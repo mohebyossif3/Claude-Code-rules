@@ -22,7 +22,7 @@ Claude must avoid shallow reasoning and always think through problems thoroughly
 
 Whenever I request software, scripts, tools, services, infrastructure, or applications:
 
-* Use **ruflo MCP** as part of the development workflow whenever applicable.
+* Use **Ruffalo MCP** as part of the development workflow whenever applicable.
 * Do not stop at partial implementations.
 * Continue working until a **fully functional, production-ready product** exists.
 
@@ -66,14 +66,12 @@ If a task involves external APIs or services:
 Claude should:
 
 * search for **the best API providers**
-* prioritize **free APIs with generous usage limits**
-* analyze API rate limits and quotas
-* compare reliability and documentation quality
-* search for **backup APIs or alternative providers**
+* prioritize **free APIs with generous limits**
+* analyze API quotas and rate limits
+* compare reliability and documentation
+* identify **fallback APIs**
 
-Claude must identify **fallback API options during brainstorming** to ensure fault tolerance.
-
-These fallback options must be integrated into the system design if the API is critical to the application.
+Fallback APIs should be considered part of **fault-tolerant design**.
 
 ---
 
@@ -83,16 +81,14 @@ After brainstorming, Claude must perform a **strong planning phase** before exec
 
 Planning must define:
 
-* project architecture
-* module boundaries
+* architecture
 * implementation steps
-* testing plan
-* validation plan
+* testing strategy
+* resilience mechanisms
 * deployment plan
-* logging plan
-* resilience strategies
+* logging strategy
+* retry/backoff strategies
 * fallback mechanisms
-* retry and backoff strategies
 
 Execution must **never begin without a strong plan**.
 
@@ -100,52 +96,45 @@ Execution must **never begin without a strong plan**.
 
 # Architecture Thinking Rule
 
-Before implementing any system, Claude must determine the most appropriate architecture.
+Before implementing any system, Claude must determine the appropriate architecture.
 
-Claude must evaluate whether the system should be:
+Possible architectures include:
 
-* a **single service**
-* a **modular monolith**
-* **microservices**
-* a **CLI tool**
-* a **worker / automation service**
-* a **data processing pipeline**
-* a **web service with frontend and backend**
+* single service
+* modular monolith
+* microservices
+* CLI tool
+* worker service
+* automation system
+* web service
+* data processing pipeline
 
-Architecture decisions should consider:
+Architecture must consider:
 
-* maintainability
 * scalability
+* maintainability
 * complexity
 * fault tolerance
 * operational overhead
-* deployment environment
 
-Claude must select the architecture that best supports the long-term stability and maintainability of the project.
+Claude must select the architecture that best supports long-term reliability.
 
 ---
 
 # Multi-Agent and Cloud Team Workflow
 
-For every task involving building, implementing, debugging, or deploying something:
+For any meaningful task:
 
-Claude must spin up **Cloud Teams** or **sub-agents** during execution.
+Claude should spin up **Cloud Teams** or **sub-agents**.
 
-Claude already has access to **Cloud Teams** and should use them when beneficial.
+Claude already has access to **Cloud Teams** and should use them when appropriate.
 
-Claude must intelligently choose between **Cloud Teams** and **sub-agents** depending on complexity and coordination needs.
+Selection depends on:
 
-### Selection Principle
-
-Choose the model that best supports:
-
-* quality
-* reliability
-* maintainability
-* testing depth
-* development speed
-
-### Execution Structure
+* complexity
+* coordination needs
+* parallelization opportunities
+* testing scope
 
 Workflow:
 
@@ -158,131 +147,205 @@ Workflow:
 7. Final verification
 8. Deployment
 
-Testing must repeat until the system is stable.
-
 ---
 
 # Tool and Skill Utilization
 
-During brainstorming, planning, execution, testing, and debugging:
-
 Claude should utilize:
 
-* available **skills**
-* available **MCP tools**
-* Cloud Teams or sub-agents when appropriate.
+* skills
+* MCP tools
+* Cloud Teams
+* sub-agents
 
-### ruflo MCP Usage
+when beneficial during development.
 
-ruflo MCP should be used for:
+---
+
+# Ruffalo MCP Usage
+
+Claude should utilize **Ruffalo MCP tools** for:
 
 * browser debugging
 * UI testing
 * browser automation
-* web research
 * frontend validation
-* console error inspection
+* web research
 
-ruflo MCP enables realistic browser testing and debugging.
+Ruffalo MCP enables:
+
+* console inspection
+* interaction testing
+* realistic browser validation.
 
 ---
 
 # Self-Learning and Memory System
 
-Claude must continuously improve through **self-learning**.
+Claude must continuously improve by learning from:
 
-Claude should learn from:
-
-* user behavior
-* repeated workflows
-* architecture preferences
+* user preferences
+* workflow patterns
+* architecture decisions
 * coding styles
 * deployment patterns
 
-Learning should use:
+Learning mechanisms include:
 
 * structured memory
-* long-term memory
+* preference files
 * vector memory retrieval.
+
+---
+
+# Persistent Issue Tracking and Self-Healing System
+
+During any development cycle, Claude must **track issues persistently until they are resolved**.
+
+Issues include:
+
+* runtime errors
+* test failures
+* deployment failures
+* integration failures
+* API errors
+* database errors
+* performance issues
+* architecture flaws
+
+These issues must be stored in **persistent memory** so they are not forgotten between iterations.
+
+### Issue Tracking Memory
+
+Issues should be stored with structured information such as:
+
+* issue description
+* component affected
+* error logs
+* reproduction steps
+* attempted fixes
+* current status
+* resolution outcome
+
+Example issue structure:
+
+```
+issue_id
+component
+description
+status
+attempted_fixes
+resolution
+```
+
+Claude must maintain awareness of unresolved issues throughout the development lifecycle.
+
+---
+
+# Self-Healing Development Cycle
+
+Claude should implement **self-healing behavior** during development.
+
+When an issue occurs:
+
+1. Detect the issue
+2. Record the issue in persistent memory
+3. Analyze logs and system state
+4. Attempt a fix
+5. Re-run tests
+6. Validate system behavior
+7. Mark the issue resolved when successful
+
+If the issue persists, Claude should continue iterating until it is fixed.
+
+Claude must **not abandon unresolved issues unless explicitly instructed**.
+
+---
+
+# Continuous Testing and Recovery
+
+Testing should be integrated into the development loop.
+
+When failures occur:
+
+Claude should:
+
+* analyze logs
+* reproduce the failure
+* fix the root cause
+* re-run tests
+* confirm resolution
+
+Persistent issue tracking ensures that unresolved problems are not lost between development cycles.
 
 ---
 
 # User Preference Learning
 
-Claude should detect patterns such as:
+Claude should observe patterns such as:
 
-* preferred development stacks
-* infrastructure preferences
-* coding patterns
-* deployment styles
-* automation levels
+* preferred workflows
+* preferred tools
+* architecture choices
+* deployment strategies
+* coding styles
 
-Claude should adapt workflows accordingly.
+Claude should adapt accordingly.
 
 ---
 
 # Preference Profile
 
-Claude should maintain a **User Preference Profile**.
-
-Example file:
+Claude should maintain a structured preference file:
 
 ```
 user_preferences.json
 ```
 
-The file may include:
+This may store:
 
-* architecture preferences
 * tooling preferences
-* deployment preferences
-* coding style patterns
+* architecture patterns
+* infrastructure preferences
+* coding styles
 
-Updates must be **evidence-based**.
+Updates must be incremental and evidence-based.
 
 ---
 
 # Long-Term Memory and Vector Memory
 
-Claude should store knowledge in vector memory including:
+Claude should use vector memory to store:
 
-* solutions
-* architecture decisions
-* reusable patterns
-* user workflow preferences
+* architecture patterns
+* reusable solutions
+* user workflow patterns
+* successful debugging approaches
 * lessons learned
 
-Vector memory allows:
-
-* pattern recognition
-* retrieval of past solutions
-* reuse of successful strategies.
+Vector memory enables retrieval of past knowledge.
 
 ---
 
 # Memory Usage in Task Execution
 
-Before starting a task:
+Before starting a task Claude should:
 
-1. Search vector memory
-2. Identify relevant patterns
-3. Apply prior solutions
+1. search vector memory
+2. identify relevant past experiences
+3. apply successful strategies
 
-After completing a task:
+After completing a task Claude should:
 
-1. Extract lessons
-2. Store structured memory
-3. Push knowledge to vector memory.
+1. extract useful knowledge
+2. update memory
+3. push structured insights into vector memory
 
 ---
 
 # Project Directory Requirement
 
-For every new project:
-
-* Create a dedicated project folder
-* Never work directly in `/` or the home directory
-* Navigate into the project folder before executing work
+Every project must have its own directory.
 
 Example:
 
@@ -291,11 +354,13 @@ mkdir project-name
 cd project-name
 ```
 
+Work must never occur directly in `/` or home directories.
+
 ---
 
 # Version Control Requirement
 
-Every project must use **Git version control**.
+All projects must use **Git**.
 
 Example:
 
@@ -303,145 +368,136 @@ Example:
 git init
 ```
 
-Git should track:
+Git must track:
 
-* source code
-* infrastructure
+* code
 * configuration
-* documentation.
+* documentation
+* infrastructure.
 
 ---
 
-# Containerization Requirement (Docker)
+# Containerization Requirement
 
 All projects must be **Dockerized**.
 
-Each project must include:
+Include:
 
 * Dockerfile
-* optional docker-compose.yml
+* docker-compose.yml when necessary.
 
 Best practices:
 
 * minimal base images
 * multi-stage builds
 * non-root containers
-* reproducible builds
-* environment variable configuration.
+* reproducible builds.
 
 ---
 
 # CI/CD Requirement
 
-Each project must include **CI/CD pipelines**.
+All projects must include **CI/CD pipelines**.
 
-Pipelines must:
+Pipeline responsibilities:
 
-1. build the project
-2. run tests
-3. build Docker images
-4. validate containers
+1. build
+2. test
+3. build Docker image
+4. validate container
 5. deploy automatically
 
-CI/CD must follow industry best practices.
+---
+
+# Database Standards
+
+Preferred databases:
+
+* **PostgreSQL**
+* **MongoDB**
+
+Claude has access to **PostgreSQL MCP** and **MongoDB MCP tools**.
+
+These tools should be used during:
+
+* testing
+* debugging
+* schema validation
+* query inspection
+* migration validation
+
+This significantly improves reliability before delivery.
 
 ---
 
 # Fault-Tolerant Design Requirement
 
-All systems must be designed using **Fault-Tolerant Design principles**.
+All systems must follow **fault-tolerant design**.
 
-Claude must implement resilience patterns including:
+Include:
 
 * retry logic
 * exponential backoff
-* circuit breaking when applicable
 * fallback APIs
-* graceful degradation
-* timeout management
-
-Systems should continue functioning even when some components fail.
+* timeout handling
+* graceful degradation.
 
 ---
 
 # Resilience and Third-Party Integration Requirement
 
-Any external API or service integration must implement:
-
-### Retry and Backoff
+External integrations must include:
 
 * retry logic
 * exponential backoff
-* bounded retries
-* jitter when appropriate
-* timeout configuration
+* rate-limit handling
+* fallback APIs
+* timeout management.
 
-### Fallback APIs
-
-When free APIs are used:
-
-Claude should implement **fallback API providers**.
-
-Example logic:
-
-Primary API → if failure → fallback API.
-
-Fallbacks must be defined during brainstorming.
-
-### Rate Limit Awareness
-
-Claude must:
-
-* detect API rate limits
-* implement rate-limit handling
-* throttle requests if necessary.
+Fallback APIs should be identified during brainstorming.
 
 ---
 
 # Code Quality Checks
 
-Before testing begins, Claude must perform **code quality evaluation**.
+Before testing begins, Claude must evaluate code for:
 
-The evaluation must verify:
+* retry mechanisms
+* exponential backoff
+* fallback APIs
+* robust error handling
+* timeout handling
+* rate-limit handling
+* resilience patterns
+* fault-tolerant architecture.
 
-* retry logic implemented where necessary
-* exponential backoff implemented
-* fallback APIs implemented when external services are used
-* robust error handling exists
-* timeouts are handled
-* rate limits are handled
-* resilience patterns are implemented
-* fault-tolerant design is respected
-* logs capture retry attempts and failures
-
-Claude must ensure the code follows **best coding practices and resilience standards** before running tests.
+Code must meet production quality standards before testing.
 
 ---
 
 # Quality Assurance and Testing
 
-Before completion Claude must ensure:
+Testing must include:
 
 * functional testing
 * end-to-end testing
-* error handling validation
-* edge case coverage
-* logging validation
-* performance checks
-* resilience validation
-* retry and fallback mechanisms verified
+* edge case validation
+* resilience testing
+* retry verification
+* fallback validation
+* performance checks.
 
 Services must:
 
 * run successfully
 * be reachable via URL
-* run in production mode.
+* operate in production mode.
 
 ---
 
 # Deployment and Accessibility
 
-Use **Caddy reverse proxy** and **sslip.io domains**.
+Use **Caddy reverse proxy** with **sslip.io domains**.
 
 Example:
 
@@ -449,11 +505,11 @@ Example:
 service-name.<server-ip>.sslip.io
 ```
 
-Requirements:
+Deployment must ensure:
 
 * automatic HTTPS
 * stable routing
-* reliable service startup.
+* reliable startup.
 
 ---
 
@@ -474,7 +530,7 @@ Log levels:
 * debug
 * info
 * warning
-* error
+* error.
 
 ---
 
@@ -487,39 +543,43 @@ error.log
 debug.log
 ```
 
-Logs must support:
-
-* rotation
-* retention
-* clear naming.
+Logs must support rotation and retention.
 
 ---
 
 # Frontend and UI Design Preferences
 
-Default frontend framework:
+Preferred frontend stack:
 
-React
+**React**
 
-Design expectations:
+Frontend development should leverage:
 
-* light theme
-* modern UI
-* Vercel-level design
-* strong hierarchy
-* clear typography.
+* React
+* relevant skills
+* MCP tools
+* **Remotion MCP tools** when visual or motion-based UI elements are needed.
+
+Remotion may be used for:
+
+* motion-based UI
+* animated interfaces
+* visual compositions
+* dynamic visual generation.
+
+Frontend debugging should use **Ruffalo MCP browser tools**.
 
 ---
 
 # Software Architecture Expectations
 
-Preferred design patterns:
+Preferred patterns:
 
 * Adapter Pattern
 * Facade Pattern
 * Factory Pattern
 
-Patterns should improve:
+These improve:
 
 * modularity
 * extensibility
@@ -535,15 +595,15 @@ Code must be:
 * maintainable
 * production-ready
 
-Fault tolerance and resilience must be treated as **core engineering requirements**.
+Fault tolerance and resilience are **core engineering requirements**.
 
 ---
 
 # Server Access Permission
 
-Claude may perform server-side actions when necessary.
+Claude may perform server-side actions when required.
 
-Sudo placeholder:
+Example placeholder:
 
 ```
 SUDO_PASSWORD=<PLACEHOLDER_FOR_SUDO_PASSWORD>
@@ -557,13 +617,13 @@ Secrets must be provided securely at runtime.
 
 A task is complete only when:
 
-* the system works correctly
+* the system functions correctly
 * deployment succeeds
 * URLs work
 * tests pass
 * resilience mechanisms exist
-* fault-tolerant design is implemented
-* logging works
+* issues tracked during development are resolved
+* logging functions correctly
 
 Claude must iterate until **all requirements are satisfied**.
 
