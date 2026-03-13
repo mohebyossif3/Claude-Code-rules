@@ -22,7 +22,7 @@ Claude must avoid shallow reasoning and always think through problems thoroughly
 
 Whenever I request software, scripts, tools, services, infrastructure, or applications:
 
-* Use **Ruffalo MCP** as part of the development workflow whenever applicable.
+* Use **ruflo MCP** as part of the development workflow whenever applicable.
 * Do not stop at partial implementations.
 * Continue working until a **fully functional, production-ready product** exists.
 
@@ -162,9 +162,9 @@ when beneficial during development.
 
 ---
 
-# Ruffalo MCP Usage
+# ruflo MCP Usage
 
-Claude should utilize **Ruffalo MCP tools** for:
+Claude should utilize **ruflo MCP tools** for:
 
 * browser debugging
 * UI testing
@@ -172,7 +172,7 @@ Claude should utilize **Ruffalo MCP tools** for:
 * frontend validation
 * web research
 
-Ruffalo MCP enables:
+ruflo MCP enables:
 
 * console inspection
 * interaction testing
@@ -567,7 +567,7 @@ Remotion may be used for:
 * visual compositions
 * dynamic visual generation.
 
-Frontend debugging should use **Ruffalo MCP browser tools**.
+Frontend debugging should use **ruflo MCP browser tools**.
 
 ---
 
