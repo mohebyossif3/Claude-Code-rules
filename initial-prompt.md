@@ -279,7 +279,7 @@
 
   Whenever I request software, scripts, tools, services, infrastructure, or applications:
 
-  Use Ruffalo MCP as part of the development workflow whenever applicable.
+  Use ruflo MCP as part of the development workflow whenever applicable.
 
   Do not stop at partial implementations.
   Continue working until a fully functional, production-ready product exists.
